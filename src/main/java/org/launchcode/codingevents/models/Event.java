@@ -6,8 +6,11 @@ public class Event {
 
     private int id;
     private static int nextId = 1;
+
     private String name;
+
     private String description;
+
 
     public Event(String name, String description) {
         this.name = name;
@@ -16,6 +19,7 @@ public class Event {
         nextId++;
     }
 
+
     public String getName() {
         return name;
     }
@@ -23,6 +27,7 @@ public class Event {
     public void setName(String name) {
         this.name = name;
     }
+
 
     public String getDescription() {
         return description;
@@ -37,6 +42,11 @@ public class Event {
     }
 
     @Override
+    public String toString() {
+        return name;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -47,10 +57,5 @@ public class Event {
     @Override
     public int hashCode() {
         return Objects.hash(id);
-    }
-
-    @Override
-    public String toString() {
-        return name;
     }
 }
