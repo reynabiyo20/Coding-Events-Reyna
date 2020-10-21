@@ -9,7 +9,6 @@ public enum EventType {
 
     private final String displayName;
 
-
     EventType(String displayName) {
         this.displayName = displayName;
     }
